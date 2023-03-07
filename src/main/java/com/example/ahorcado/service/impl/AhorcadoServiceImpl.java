@@ -5,7 +5,7 @@ import com.example.ahorcado.service.AhorcadoService;
 public class AhorcadoServiceImpl implements AhorcadoService {
     @Override
     public void compruebaPalabra() {
-        
+
     }
 
     @Override
@@ -16,5 +16,10 @@ public class AhorcadoServiceImpl implements AhorcadoService {
     @Override
     public String muestraProgreso() {
         return null;
+    }
+
+    @Override
+    public void disminuyeIntentos() {
+        
     }
 }

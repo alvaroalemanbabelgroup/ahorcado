@@ -8,4 +8,5 @@ public interface AhorcadoService {
     public void palabraCorrecta();
 
     public String muestraProgreso();
+    public void disminuyeIntentos();
 }
