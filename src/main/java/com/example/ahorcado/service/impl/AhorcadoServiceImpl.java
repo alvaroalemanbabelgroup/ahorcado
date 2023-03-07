@@ -20,6 +20,6 @@ public class AhorcadoServiceImpl implements AhorcadoService {
 
     @Override
     public void disminuyeIntentos() {
-        
+
     }
 }
