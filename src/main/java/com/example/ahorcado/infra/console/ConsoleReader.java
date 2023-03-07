@@ -9,6 +9,11 @@ import java.util.Scanner;
 @Component
 public class ConsoleReader {
     private AhorcadoService ahorcadoService;
+
+    public ConsoleReader(AhorcadoService ahorcadoService) {
+        this.ahorcadoService = ahorcadoService;
+    }
+
     @PostConstruct
     public void init() {
         Scanner sc = new Scanner(System.in);
