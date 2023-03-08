@@ -27,12 +27,24 @@ public class AhorcadoRepositoryMemory implements AhorcadoRepository {
     }
 
     @Override
-    public void compruebaPalabra() {
+    public void disminuyeIntentos(int intentos) {
 
     }
 
     @Override
-    public void palabraCorrecta() {
+    public void compruebaLetra(char letra, Ahorcado ahorcado) {
+        String palabra = ahorcado.getPalabra();
+        for (int i = 0; i< palabra.length(); i++){
+            if (palabra.substring(i,1).equals(letra)){
+                System.out.println(palabra.charAt(i));
+            }else{
+                System.out.println(" _ ");
+            }
+        }
+    }
+
+    @Override
+    public void palabraCorrecta(String palabra) {
 
     }
 

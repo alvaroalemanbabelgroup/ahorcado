@@ -1,5 +1,6 @@
 package com.example.ahorcado.infra.console;
 
+import com.example.ahorcado.repository.AhorcadoRepository;
 import com.example.ahorcado.service.AhorcadoService;
 import org.springframework.stereotype.Component;
 
@@ -9,6 +10,7 @@ import java.util.Scanner;
 @Component
 public class ConsoleReader {
     private AhorcadoService ahorcadoService;
+    private AhorcadoRepository ahorcadoRepository;
 
     public ConsoleReader(AhorcadoService ahorcadoService) {
         this.ahorcadoService = ahorcadoService;
@@ -37,7 +39,11 @@ public class ConsoleReader {
                 System.out.println("Cerrando el juego...");
                 break;
             case 1:
-                System.out.println(ahorcadoService.muestraProgreso());
+                int intentos = 8;
+                String palabra = ahorcadoRepository.seleccionaPalabra();
+                System.out.println("Introduce una letra: ");
+                ahorcadoService.compruebaLetra(sc.next().charAt(0),palabra);
+
         }
     }
 }
